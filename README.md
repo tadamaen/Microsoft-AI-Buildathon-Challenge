@@ -145,6 +145,112 @@ The system follows a strict, gated workflow. Here is the step-by-step pipeline p
 - Agent 9 (Email Crafter) sends the clinical log to the user's email.
 - Concurrently, Agent 10 (News) provides passive reading material and Agent 12 (Data Curator) archives the anonymous lifecycle to an Excel database.
 
+```mermaid
+graph TD
+%% =====================
+
+%% ENTRY LAYER
+
+%% =====================
+
+A[User Input] --> B[1. Clinical Intake]
+
+B --> C[2. Triage Classification]
+
+
+
+%% =====================
+
+%% DECISION LAYER
+
+%% =====================
+
+C -->|Incomplete Data| C1[Request More Info]
+
+C1 --> A
+
+
+
+C -->|Complete Data| D[3. RAG Retriever]
+
+
+
+%% =====================
+
+%% CORE SYNTHESIS LAYER
+
+%% =====================
+
+D --> E[4. Triage Synthesizer]
+
+E --> F[5. Patient Communicator]
+
+F --> G[6. Micro-Planner]
+
+G --> H[7-Day Recovery Plan]
+
+
+
+%% =====================
+
+%% EXECUTION LOOP
+
+%% =====================
+
+H --> I[User Executes Plan]
+
+
+
+I --> J[7. Dynamic Rescheduler]
+
+J -->|Too Hard / Missed Tasks| G
+
+
+
+I --> K[11. Weekly Check-In NLP]
+
+
+
+K --> L{Severity Improving?}
+
+
+
+L -->|No| G
+
+L -->|Yes| M[8. Maintenance Coach]
+
+
+
+%% =====================
+
+%% COMPLETION LAYER
+
+%% =====================
+
+M --> N[9. Professional Email Crafter]
+
+M --> O[12. Research Data Curator]
+
+
+
+N --> P[Clinical Log Sent]
+
+O --> Q[Anonymous Dataset Stored]
+
+
+
+%% =====================
+
+%% SIDE SERVICES (DOTTED)
+
+%% =====================
+
+D -.-> R[10. News Feed Collater]
+
+R -.-> I 
+```
+
+
 ## 7) How Can This App Benefit The Healthcare Industry
 
 ### Locally (Singapore):
