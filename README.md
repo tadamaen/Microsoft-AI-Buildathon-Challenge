@@ -145,6 +145,7 @@ The system follows a strict, gated workflow. Here is the step-by-step pipeline p
 - Agent 9 (Email Crafter) sends the clinical log to the user's email.
 - Concurrently, Agent 10 (News) provides passive reading material and Agent 12 (Data Curator) archives the anonymous lifecycle to an Excel database.
 
+### Mermaid Diagram (Agent Process Workflow)
 ```mermaid
 graph TD
 %% =====================
