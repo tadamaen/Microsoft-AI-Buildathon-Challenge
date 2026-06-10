@@ -1,0 +1,25 @@
+# Core Web Framework & UI
+streamlit
+
+# AI & Data Validation
+openai
+pydantic
+
+# Data Processing, Visualization & Export
+pandas
+altair
+openpyxl
+PyPDF2
+
+# Microsoft Graph API Integration
+msal
+requests
+
+# Google Calendar & Gmail API Integration
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+google-auth
+
+# Timezone Handling
+pytz
